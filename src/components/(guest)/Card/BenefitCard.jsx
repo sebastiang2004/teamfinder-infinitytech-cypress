@@ -1,4 +1,4 @@
-import {cn} from "@/lib/utils";
+import {cn} from "@/lib/utils.js";
 import {AnimatePresence, motion} from "framer-motion";
 import {Link} from "react-router-dom";
 import {useState} from "react";
@@ -12,7 +12,7 @@ export const BenefitCard = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+                "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-3",
                 className
             )}
         >
@@ -58,7 +58,7 @@ export const Card = ({
     return (
         <div
             className={cn(
-                "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+                "rounded-2xl h-[300px] w-full p-4 overflow-hidden dark:bg-black border border-gray-200 dark:border-white/[0.2] group-hover:border-slate-300 dark:group-hover:border-slate-700 relative z-20",
                 className
             )}
         >
@@ -73,7 +73,7 @@ export const CardTitle = ({
                               children,
                           }) => {
     return (
-        <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+        <h4 className={cn("dark:text-zinc-100 font-medium text-[18px] tracking-wide mt-4", className)}>
             {children}
         </h4>
     );
@@ -85,7 +85,7 @@ export const CardDescription = ({
     return (
         <p
             className={cn(
-                "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+                "mt-8 text-zinc-500 dark:text-zinc-400 tracking-wide leading-relaxed text-sm",
                 className
             )}
         >

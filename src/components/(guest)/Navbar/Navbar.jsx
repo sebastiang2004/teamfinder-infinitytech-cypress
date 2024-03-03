@@ -32,10 +32,10 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
                 <Theme/>
                 <Link to="/register">
-                    <Button className="bg-transparent text-black dark:bg-primary-blue dark:text-white">Register</Button>
+                    <Button variant="ghost">Register</Button>
                 </Link>
                 <Link to="/login">
-                    <Button className="px-10 bg-primary-purple text-white">Login</Button>
+                    <Button className="px-10">Login</Button>
                 </Link>
             </div>
         </div>
