@@ -1,4 +1,4 @@
-export default function CharacteristiscSection() {
+export default function CharacteristicsSection() {
 
   const platformCharacteristics = [
     {
@@ -20,12 +20,17 @@ export default function CharacteristiscSection() {
   ]
 
   return (
-    <div className="grid grid-cols-2 px-36 py-20">
+    <section id="characteristics" className="grid grid-cols-2 items-center px-28 h-[600px] dark:bg-primary-blue">
       <img src="https://i.ibb.co/7tLVtYk/Captura-de-ecran-din-2024-03-03-la-12-03-19-removebg-preview.png" alt=""/>
-      <div className="mt-20">
-        <p className="text-[32px]">Unlock the Power of <span
+      <div>
+        <p className="text-[35px] font-medium">Unlock the Power of <span
           className="text-primary-purple">Collaboration</span> with
           Our Platform</p>
+        <p className="text-[14px] mt-6 text-gray-400">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+          aspernatur corporis eius error est id illo illum, laboriosam laudantium molestias mollitia nesciunt odit
+          officiis perferendis quo repellendus tenetur veritatis voluptate.
+        </p>
         <p className="text-[14px] mt-6 text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
           aspernatur corporis eius error est id illo illum, laboriosam laudantium molestias mollitia nesciunt odit
@@ -36,13 +41,13 @@ export default function CharacteristiscSection() {
             return (
               <div key={characteristic.id} className="flex items-center ">
                 <img src="https://i.ibb.co/kqYykhC/Captura-de-ecran-din-2024-03-03-la-13-17-19-removebg-preview.png"
-                     className="w-24 h-20 object-cover" alt=""/>
+                     className="w-20 object-cover" alt=""/>
                 <p>{characteristic.name}</p>
               </div>
             )
           })}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

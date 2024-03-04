@@ -1,4 +1,4 @@
-import {InputAnimated} from "@/components/ui/input-animated";
+import {InputAnimated} from "@/components/ui/input-animated.jsx";
 import {Button} from "@/components/ui/button.jsx";
 import {FcGoogle} from "react-icons/fc";
 import {SiGithub} from "react-icons/si";

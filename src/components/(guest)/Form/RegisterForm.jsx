@@ -1,4 +1,4 @@
-import {InputAnimated} from "@/components/ui/input-animated";
+import {InputAnimated} from "@/components/ui/input-animated.jsx";
 import {Button} from "@/components/ui/button.jsx";
 import {Link} from "react-router-dom";
 
@@ -12,7 +12,7 @@ export default function RegisterForm() {
       <p className="custom-label">Your name</p>
       <InputAnimated type="text" placeholder="John Doe"/>
       <p className="custom-label">Organization Name</p>
-      <InputAnimated type="text" placeholder="name"/>
+      <InputAnimated type="text" placeholder="Organization Name"/>
       <p className="custom-label">Address</p>
       <InputAnimated type="text" placeholder="Lost Creek Road"/>
       <p className="custom-label">Email</p>

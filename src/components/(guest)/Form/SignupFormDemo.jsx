@@ -1,6 +1,6 @@
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import { Label } from "@/components/ui/label.jsx";
+import { Input } from "@/components/ui/input.jsx";
+import { cn } from "@/lib/utils.js";
 import {
   IconBrandGithub,
   IconBrandGoogle,

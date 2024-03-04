@@ -13,8 +13,6 @@ export default function Login() {
   }, []);
 
 
-
-
   return (
     <>
       <div className="grid grid-cols-2 min-h-screen">

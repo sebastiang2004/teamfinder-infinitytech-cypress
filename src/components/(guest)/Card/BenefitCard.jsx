@@ -19,7 +19,7 @@ export const BenefitCard = ({
             {items.map((item, idx) => (
                 <Link
                     to={item?.link}
-                    key={item?.link}
+                    key={item?.id}
                     className="relative group  block p-2 h-full w-full"
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}

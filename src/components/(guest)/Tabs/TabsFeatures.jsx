@@ -1,80 +1,118 @@
-import {AiFillDashboard} from "react-icons/ai";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@radix-ui/react-tabs";
-import {Menu} from "lucide-react";
+import {SlDocs} from "react-icons/sl";
+import {AiFillAppstore} from "react-icons/ai";
+import {MdOutlineIntegrationInstructions, MdSpaceDashboard, MdViewStream} from "react-icons/md";
+import {TbSettingsAutomation} from "react-icons/tb";
+import {LuClipboardSignature} from "react-icons/lu";
+import {ArrowRight} from "lucide-react";
+import {useState} from "react";
 
 export default function TabsFeatures() {
 
-  const features = [{
+  const features = [
+    {
     id: 1,
-    name: "dashboard",
-    description: "asd dasd dsadas dasda",
-    icon: "",
-    value: "dashboard"
+    name: "boards",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+    icon: <LuClipboardSignature/>,
+    image: "https://i.ibb.co/Qv8JRFb/Kanban-move-work.gif",
+    value: "boards"
   },
     {
       id: 2,
-      name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: "adsa"
+      name: "views",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <MdViewStream/>,
+      image: "https://i.ibb.co/bNHWj99/preview.png",
+      value: "views"
     },
     {
       id: 3,
       name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: "fsd"
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <MdSpaceDashboard/>,
+      image: "https://i.ibb.co/Sxvh388/9a188cf3dbdbcdd024bef1113e536597.jpg",
+      value: "dashboard"
     },
     {
       id: 4,
-      name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: ""
+      name: "integration",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <MdOutlineIntegrationInstructions/>,
+      image: "https://i.ibb.co/CBLbNH2/download.png",
+      value: "integration"
     },
     {
       id: 5,
-      name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: ""
+      name: "apps",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <AiFillAppstore/>,
+      image: "https://i.ibb.co/9wdbstn/preview.png",
+      value: "apps"
     },
     {
       id: 6,
-      name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: ""
+      name: "docs",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <SlDocs/>,
+      image: "https://i.ibb.co/CsjV71v/fogga-kanban.png",
+      value: "docs"
     },
     {
       id: 7,
-      name: "dashboard",
-      description: "asd dasd dsadas dasda",
-      icon: "",
-      value: ""
-    }];
+      name: "automations",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur deleniti doloribus eaque enim inventore maiores nostrum nulla odit ut! Alias, amet asperiores consectetur esse ex ipsam nam praesentium reprehenderit.",
+      icon: <TbSettingsAutomation/>,
+      image: "https://i.ibb.co/9wdbstn/preview.png",
+      value: "automations"
+    }
+  ];
+
+  const [activeItem, setActiveItem] = useState("");
+
+  function handleItemClick(name) {
+    setActiveItem(name);
+  }
+
 
   return (
     <>
-      <Tabs defaultValue="account" className="mt-8 h-20 w-full bg-primary-purple rounded-md">
-        <TabsList className="flex justify-center gap-4">
+      <Tabs defaultValue="views" className="h-16 bg-primary-blue dark:bg-white rounded-md">
+        <TabsList className="flex justify-center gap-5 h-full">
           {features.map(function (feature) {
             return (
-              <TabsTrigger key={feature.id} value={feature.value} className="p-4  rounded bg-white dark:text-black">
-                <Menu/>
-                Account
+              <TabsTrigger value={feature.value}
+                           key={feature.id}
+                           onClick={()=>handleItemClick(feature.value)}
+                           className={`flex flex-col items-center justify-center rounded bg-white dark:text-black w-28 my-1 ${activeItem === feature.value ? 'border-2 border-primary-purple' : ''}`}>
+                <div className="mt-1">
+                  {feature.icon}
+                </div>
+                <p className="text-gray-400 text-[13px] uppercase mt-1">
+                  {feature.name}
+                </p>
               </TabsTrigger>
             )
           })}
         </TabsList>
         {features.map(function (feature) {
           return (
-            <TabsContent key={feature.id} value={feature.value} className="w-full ">
-              <div className="flex items-center justify-between w-full mt-10 ">
-                <img src="https://i.ibb.co/sjFB0NM/Captura-de-ecran-din-2024-03-03-la-12-00-02.png" alt=""/>
-                <div className="flex">
-                  <p>lorem ipsum</p>
-                  <p>lorem ipsum</p>
+            <TabsContent value={feature.value}
+                         key={feature.id}>
+              <div className="grid grid-cols-2 gap-20 items-center justify-between w-full mt-24">
+                <img src={feature?.image}
+                     className="h-[400px] object-cover rounded-md mt-10" alt=""/>
+                <div>
+                  <div className="flex items-center text-primary-purple gap-2">
+                    <div className="text-[23px]">
+                      {feature.icon}
+                    </div>
+                    <p className="uppercase font-medium">{feature.name}</p>
+                  </div>
+                  <p className="text-gray-400 text-[15px] mt-6">{feature.description}</p>
+                  <p className="flex items-center text-primary-purple text-[14px] gap-2 mt-4 cursor-pointer">Read
+                    More <ArrowRight size={14}/>
+                  </p>
                 </div>
               </div>
             </TabsContent>
