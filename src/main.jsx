@@ -10,11 +10,13 @@ import Login from "./pages/(guest)/login.jsx";
 import Register from "@/pages/(guest)/register.jsx";
 import {ThemeProvider} from "@/components/ThemeProvider.jsx";
 import Dashboard from "@/pages/(admin)/dashboard.jsx";
+import Error from "@/components/Error.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
+    errorElement: <Error/>
   },
   {
     path: "/login",
