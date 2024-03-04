@@ -2,7 +2,7 @@ import {MacbookScroll} from "@/components/ui/macbook-scroll";
 
 export function MacbookScrollHero() {
   return (
-    <div className="overflow-hidden dark:bg-[#0B0B0F] bg-white w-full">
+    <div className="overflow-hidden w-full">
       <MacbookScroll
         title={<span></span>}
         badge={

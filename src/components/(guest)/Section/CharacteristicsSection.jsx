@@ -20,7 +20,7 @@ export default function CharacteristicsSection() {
   ]
 
   return (
-    <section id="characteristics" className="grid grid-cols-2 items-center px-28 h-[600px] dark:bg-primary-blue">
+    <section id="characteristics" className="grid grid-cols-2 items-center px-28 h-[600px] bg-purple-50 dark:bg-primary-blue">
       <img src="https://i.ibb.co/7tLVtYk/Captura-de-ecran-din-2024-03-03-la-12-03-19-removebg-preview.png" alt=""/>
       <div>
         <p className="text-[35px] font-medium">Unlock the Power of <span

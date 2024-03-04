@@ -11,7 +11,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="h-32 flex flex-col justify-center px-28 bg-primary-blue text-white">
+    <div className="h-32 flex flex-col justify-center px-28">
       <div className="flex justify-between">
         <Logo/>
         <ul className="flex items-center gap-5 font-normal text-[14px] cursor-pointer">

@@ -6,7 +6,7 @@ import {AnimatedPin} from "@/components/AnimatedPin.jsx";
 export default function Banner() {
   return (
     <section id="banner"
-      className="grid grid-cols-2 items-center dark:bg-primary-blue ps-28 text-primary-blue dark:text-white">
+      className="grid grid-cols-2 items-center ps-28 text-primary-blue dark:text-white bg-purple-50 dark:bg-primary-blue">
       <div>
         <p className="text-[36px] font-semibold">Get ready to make your day more productive</p>
         <p className="mt-4 text-gray-400 text-[15px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
