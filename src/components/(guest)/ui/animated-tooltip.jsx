@@ -11,7 +11,7 @@ export const AnimatedTooltip = ({
                                   items,
                                 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const springConfig = { stiffness: 100, damping: 5 };
+  const springConfig = {stiffness: 100, damping: 5};
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
   const rotate = useSpring(
@@ -40,7 +40,7 @@ export const AnimatedTooltip = ({
           <AnimatePresence mode="wait">
             {hoveredIndex === item.id && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{opacity: 0, y: 20, scale: 0.6}}
                 animate={{
                   opacity: 1,
                   y: 0,
@@ -51,7 +51,7 @@ export const AnimatedTooltip = ({
                     damping: 10,
                   },
                 }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                exit={{opacity: 0, y: 20, scale: 0.6}}
                 style={{
                   translateX: translateX,
                   rotate: rotate,
@@ -59,8 +59,10 @@ export const AnimatedTooltip = ({
                 }}
                 className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
               >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
+                <div
+                  className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px "/>
+                <div
+                  className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px "/>
                 <div className="font-bold text-white relative z-30 text-base">
                   {item.name}
                 </div>
@@ -68,7 +70,9 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <img src={item.image} onMouseMove={handleMouseMove} alt={item.name} height={100} width={100} className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500" alt=""/>
+          <img src={item.image} onMouseMove={handleMouseMove} alt={item.name} height={100} width={100}
+               className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
+               alt=""/>
         </div>
       ))}
     </>
