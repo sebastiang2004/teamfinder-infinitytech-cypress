@@ -1,5 +1,5 @@
-import {InputAnimated} from "@/components/ui/input-animated.jsx";
-import {Button} from "@/components/ui/button.jsx";
+import {InputAnimated} from "@/components/(guest)/ui/input-animated.jsx";
+import {Button} from "@/components/(guest)/ui/button.jsx";
 import {FcGoogle} from "react-icons/fc";
 import {SiGithub} from "react-icons/si";
 import {Link} from "react-router-dom";

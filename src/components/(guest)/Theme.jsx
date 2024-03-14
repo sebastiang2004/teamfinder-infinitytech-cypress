@@ -1,4 +1,4 @@
-import {useTheme} from "@/components/ThemeProvider.jsx";
+import {useTheme} from "@/components/(guest)/ThemeProvider.jsx";
 import {Moon, Sun} from "lucide-react";
 
 export default function Theme() {

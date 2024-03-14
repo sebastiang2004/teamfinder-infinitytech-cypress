@@ -1,5 +1,5 @@
 import RegisterForm from "@/components/(guest)/Form/RegisterForm.jsx";
-import SparklesBackground from "@/components/SparklesBackground.jsx";
+import SparklesBackground from "@/components/(guest)/SparklesBackground.jsx";
 
 export default function Register() {
   return (

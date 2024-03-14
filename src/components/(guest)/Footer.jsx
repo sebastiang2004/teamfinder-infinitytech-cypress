@@ -1,4 +1,4 @@
-import Logo from "@/components/Logo.jsx";
+import Logo from "@/components/(guest)/Logo.jsx";
 import {ArrowUp} from "lucide-react";
 import {useState} from "react";
 

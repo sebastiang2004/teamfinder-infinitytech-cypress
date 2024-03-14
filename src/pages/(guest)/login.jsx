@@ -1,7 +1,7 @@
 import LoginForm from "@/components/(guest)/Form/LoginForm.jsx";
-import {BackgroundBoxes} from "@/components/BackgroundBoxes.jsx";
+import {BackgroundBoxes} from "@/components/(guest)/BackgroundBoxes.jsx";
 import {useEffect, useState} from "react";
-import Loading from "@/components/Loading.jsx";
+import Loading from "@/components/(guest)/Loading.jsx";
 
 
 export default function Login() {

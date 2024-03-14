@@ -1,5 +1,5 @@
-import {MacbookScrollHero} from "@/components/MacbookScrollHero.jsx";
-import HeroSectionContent from "@/components/HeroSectionContent.jsx";
+import {MacbookScrollHero} from "@/components/(guest)/MacbookScrollHero.jsx";
+import HeroSectionContent from "@/components/(guest)/HeroSectionContent.jsx";
 import HeroSectionCard from "@/components/(guest)/Section/HeroSectionCard.jsx";
 
 export default function HeroSection() {

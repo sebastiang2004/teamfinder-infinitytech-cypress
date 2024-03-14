@@ -1,5 +1,5 @@
-import {InputAnimated} from "@/components/ui/input-animated.jsx";
-import {Button} from "@/components/ui/button.jsx";
+import {InputAnimated} from "@/components/(guest)/ui/input-animated.jsx";
+import {Button} from "@/components/(guest)/ui/button.jsx";
 import {Link} from "react-router-dom";
 
 export default function RegisterForm() {

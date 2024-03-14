@@ -11,6 +11,6 @@ export default function EmployeeRegisterForm(){
         <Button className="w-full uppercase">Sign Up</Button>
       </div>
     </form>
-    </>
+    
   )
 }

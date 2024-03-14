@@ -1,7 +1,7 @@
-import {Button} from "@/components/ui/button.jsx";
+import {Button} from "@/components/(guest)/ui/button.jsx";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {Link} from "react-router-dom";
-import {AnimatedPin} from "@/components/AnimatedPin.jsx";
+import {AnimatedPin} from "@/components/(guest)/AnimatedPin.jsx";
 
 export default function Banner() {
   return (

@@ -1,4 +1,4 @@
-import {PinContainer} from "@/components/ui/3d-pin";
+import {PinContainer} from "@/components/(guest)/ui/3d-pin";
 
 export function AnimatedPin() {
   return (

@@ -1,4 +1,4 @@
-import {Boxes} from "@/components/ui/background-boxes";
+import {Boxes} from "@/components/(guest)/ui/background-boxes";
 export function BackgroundBoxes() {
   return (
     <div className="relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center">

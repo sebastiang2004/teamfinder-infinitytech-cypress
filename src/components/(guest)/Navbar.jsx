@@ -1,6 +1,6 @@
-import Logo from "@/components/Logo.jsx";
-import Theme from "@/components/Theme.jsx";
-import {Button} from "@/components/ui/button.jsx";
+import Logo from "@/components/(guest)/Logo.jsx";
+import Theme from "@/components/(guest)/Theme.jsx";
+import {Button} from "@/components/(guest)/ui/button.jsx";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 
