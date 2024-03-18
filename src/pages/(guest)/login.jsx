@@ -1,7 +1,7 @@
 import LoginForm from "@/components/(guest)/Form/LoginForm.jsx";
-import {BackgroundBoxes} from "@/components/BackgroundBoxes.jsx";
+import {BackgroundBoxes} from "@/components/(guest)/BackgroundBoxes.jsx";
 import {useEffect, useState} from "react";
-import Loading from "@/components/Loading.jsx";
+import Loading from "@/components/(guest)/Loading.jsx";
 
 
 export default function Login() {
@@ -14,18 +14,17 @@ export default function Login() {
 
 
   return (
-    <>
-      <div className="grid grid-cols-2 min-h-screen">
-        {backgroundLoaded ?
-          <BackgroundBoxes/> :
-          <div className="bg-gray-950">
-            <Loading/>
-          </div>
-        }
-        <div className="flex flex-col justify-center px-32">
-          <LoginForm/>
+    <div className="grid lg:grid-cols-2 grid-cols-1 min-h-screen">
+      {backgroundLoaded ? (
+          <BackgroundBoxes />
+        ) :
+        <div className="bg-gray-950">
+          <Loading/>
         </div>
+      }
+      <div className="flex flex-col justify-center lg:px-32 px-20">
+        <LoginForm/>
       </div>
-    </>
+    </div>
   )
 }

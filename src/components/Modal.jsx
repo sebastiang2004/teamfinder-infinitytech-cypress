@@ -5,25 +5,23 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog.jsx"
-import {Button} from "@/components/ui/button.jsx";
-import ProjectForm from "@/components/(admin)/Form/ProjectForm.jsx";
+} from "@/components/(guest)/ui/dialog"
 
-export default function ProjectModal() {
+export default function Modal({title, subtitle, formElement}) {
 
   return (
-      <Dialog>
-        <DialogTrigger>
-          <Button className="bg-primary-purple dark:bg-white dark:text-black uppercase text-[12px] px-12">Create a Project</Button>
-        </DialogTrigger>
-        <DialogContent className="min-w-[900px] h-[500px] p-14">
-          <DialogHeader>
-            <DialogTitle className="uppercase text-[16px]">Add a project</DialogTitle>
-            <DialogDescription>
-              <ProjectForm/>
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
+    <Dialog>
+      <DialogTrigger>
+        {title}
+      </DialogTrigger>
+      <DialogContent className="min-w-[900px] p-14">
+        <DialogHeader>
+          <DialogTitle className="uppercase text-[16px]">{subtitle}</DialogTitle>
+          <DialogDescription>
+            {formElement}
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
   )
 }

@@ -1,4 +1,4 @@
-import {AnimatedTooltip} from "@/components/ui/animated-tooltip";
+import {AnimatedTooltip} from "@/components/(guest)/ui/animated-tooltip.jsx";
 
 const people = [
   {
@@ -47,7 +47,7 @@ const people = [
 
 export function AnimatedTooltipUser() {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center">
       <AnimatedTooltip items={people}/>
     </div>
   );

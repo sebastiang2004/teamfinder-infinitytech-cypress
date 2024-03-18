@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button.jsx";
-import {AnimatedTooltipUser} from "@/components/AnimatedTooltipUser.jsx";
+import {Button} from "@/components/(guest)/ui/button.jsx";
+import {AnimatedTooltipUser} from "@/components/(guest)/AnimatedTooltipUser.jsx";
 
 export default function HeroSectionContent() {
   return (

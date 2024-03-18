@@ -1,4 +1,4 @@
-import {PinContainer} from "@/components/ui/3d-pin";
+import {PinContainer} from "@/components/(guest)/ui/3d-pin.jsx";
 
 export function AnimatedPin() {
   return (
@@ -13,7 +13,7 @@ export function AnimatedPin() {
             Team Finder App
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
+            <span className="text-slate-500">
             With us, every project becomes a success story. Discover the power of collaboration and innovation in project management.
             </span>
           </div>

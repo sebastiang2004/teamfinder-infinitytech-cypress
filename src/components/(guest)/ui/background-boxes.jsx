@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils.js"
 
 export const BoxesCore = ({ className, ...rest }) => {
   const rows = new Array(150).fill(1);

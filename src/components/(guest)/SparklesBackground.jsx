@@ -1,4 +1,4 @@
-import {SparklesCore} from "@/components/ui/sparkles.jsx";
+import {SparklesCore} from "@/components/(guest)/ui/sparkles.jsx";
 
 export default function SparklesBackground() {
   return (

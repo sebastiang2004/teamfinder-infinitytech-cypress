@@ -19,9 +19,6 @@ export default function Home() {
       <div className="mt-40">
         <WorkflowFeaturesSection/>
       </div>
-      {/*<div className="mt-40">*/}
-      {/*  <img src="https://i.ibb.co/sjFB0NM/Captura-de-ecran-din-2024-03-03-la-12-00-02.png" className="w-full"/>*/}
-      {/*</div>*/}
       <div className="my-20">
         <Banner/>
       </div>
