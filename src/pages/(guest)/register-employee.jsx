@@ -1,18 +1,11 @@
-import {InputAnimated} from "@/components/ui/input-animated.jsx";
-import {Button} from "@/components/ui/button.jsx";
+import EmployeeRegisterForm from "@/components/(guest)/Form/EmployeeRegisterForm.jsx";
+import BackgroundGradient from "@/components/(guest)/BackgroundGradient.jsx";
 
 export default function RegisterEmployee() {
   return (
-    <form className="grid grid-cols-2">
-      <div>
-        <p className="custom-label">Your name</p>
-        <InputAnimated/>
-        <p className="custom-label">Your name</p>
-        <InputAnimated/>
-        <p className="custom-label">Your name</p>
-        <InputAnimated/>
-        <Button className="w-full uppercase">Sign Up</Button>
-      </div>
-    </form>
+    <div className="grid grid-cols-2 min-h-screen">
+      <EmployeeRegisterForm/>
+      <BackgroundGradient/>
+    </div>
   )
 }

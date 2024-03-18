@@ -1,14 +1,22 @@
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs.jsx";
 
-export default function Tab(){
-  return(
-      <Tabs defaultValue="account" className="w-[400px]">
-        <TabsList>
-          <TabsTrigger value="account">Account</TabsTrigger>
-          <TabsTrigger value="password">Password</TabsTrigger>
+export default function TabsCustom({tabs}) {
+  return (
+    <Tabs defaultValue="Profile">
+      {/*<div className="flex w-full justify-center">*/}
+        <TabsList className="px-10 py-6">
+          {tabs.map(function (tab) {
+            return (
+              <TabsTrigger key={tab.id} value={tab.name} className="py-3">{tab.name}</TabsTrigger>
+            )
+          })}
         </TabsList>
-        <TabsContent value="account">Make changes to your account here.</TabsContent>
-        <TabsContent value="password">Change your password here.</TabsContent>
-      </Tabs>
+      {/*</div>*/}
+      {tabs.map(function (tab) {
+        return (
+          <TabsContent key={tab.id} value={tab.name} className="mt-20">{tab.content}</TabsContent>
+        )
+      })}
+    </Tabs>
   )
 }

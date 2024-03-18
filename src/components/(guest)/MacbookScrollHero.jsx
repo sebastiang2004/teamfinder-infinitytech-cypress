@@ -1,4 +1,4 @@
-import {MacbookScroll} from "@/components/(guest)/ui/macbook-scroll";
+import {MacbookScroll} from "@/components/(guest)/ui/macbook-scroll.jsx";
 
 export function MacbookScrollHero() {
   return (

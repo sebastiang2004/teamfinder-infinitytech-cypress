@@ -1,5 +1,5 @@
-import { Label } from "@/components/ui/label.jsx";
-import { Input } from "@/components/ui/input.jsx";
+import { Label } from "@/components/(guest)/ui/label.jsx";
+import { Input } from "@/components/(guest)/ui/input.jsx";
 import { cn } from "@/lib/utils.js";
 import {
   IconBrandGithub,

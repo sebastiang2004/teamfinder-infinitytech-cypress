@@ -25,7 +25,14 @@ module.exports = {
     extend: {
       colors: {
         "primary-blue": "#1E1E1E",
+        "secondary-blue": "#2E37A480",
         "primary-purple": "#7369F5",
+        "secondary-purple": "#F5F3FF",
+        //  "primary-blue": "#2E37A4",
+        "primary-gray": "#333548BF",
+        "secondary-gray": "#2E37A40D",
+//          "primary-dark": "#15141D",
+//           "secondary-dark": "#252231",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -87,7 +94,7 @@ module.exports = {
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
 }
 
-function addVariablesForColors({ addBase, theme }) {
+function addVariablesForColors({addBase, theme}) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
