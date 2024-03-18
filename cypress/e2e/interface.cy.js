@@ -68,7 +68,6 @@ cy.wait(2000)
     // Test for the Dashboard page
     it('Dashboard page loads successfully', () => {
       cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/dashboard')
-      // Click the button with id "radix-:r40"
 
       cy.contains('Departments').click();
       cy.wait(1000);
@@ -83,20 +82,37 @@ cy.wait(2000)
       cy.contains('URL').click();
       cy.wait(1000);
 
-      })
-      
 // Test for the Department page
+
+
+})
 it('Department page loads successfully', () => {
 
   cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/departments')
  cy.wait(1000);
 cy.contains('Create a department').click();
 cy.wait(1000);
-cy.get('input[name="departmentname"]').eq(0).type('Development Team');
-cy.get('input[name="description"]').eq(1).type('A short description about nothing :)');
+cy.get('input[name]').eq(0).type('Development Team');
+cy.get('input[name]').eq(1).type('A short description about nothing :)');
 cy.contains('Add a department').click();
 cy.get('input[name="Search for a department....').type('Development Team');
 })
 
+//Test for the Members page
+it('Members page loads successfully', () => {
+  cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/members')
+  cy.wait(1000);
+  cy.contains('Add a member').click();
+  cy.wait(1000);
+  cy.get('input[type="text"]').then(($input) => {
+    const url = $input.val();
+    cy.visit(url);
+    //TODO fillout forms
+  });
+  cy.wait(1000);
 
-    })
+})
+
+      
+      })
+      
