@@ -26,12 +26,22 @@ describe('Global Tests', () => {
   })
 
   // Test for the login page
-  it('Login page loads successfully', () => {
+  it('(I)Login page loads successfully', () => {
     cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/login') 
-    //fill all forms
+    //fill all forms for incorrect login
     cy.get('input[name="email"]').type('iulian@gmail.com')
     cy.wait(1000)
     cy.get('input[name="password"]').type('1234')
+    cy.wait(1000)
+    cy.get('button[type="submit"]').click()
+cy.wait(2000)
+  })
+  it('(C) Login page loads successfully', () => {
+    cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/login') 
+    //fill all forms for correct login(should go to dashboard page after this test is done)
+    cy.get('input[name="email"]').type('gabriel.gurzun@student.usv.ro')
+    cy.wait(1000)
+    cy.get('input[name="password"]').type('123456')
     cy.wait(1000)
     cy.get('button[type="submit"]').click()
 cy.wait(2000)
@@ -59,7 +69,34 @@ cy.wait(2000)
     it('Dashboard page loads successfully', () => {
       cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/dashboard')
       // Click the button with id "radix-:r40"
-      cy.get('#radix-:r40').click();
-      })
-    })
 
+      cy.contains('Departments').click();
+      cy.wait(1000);
+      cy.contains('Members').click();
+      cy.wait(1000);
+      cy.contains('Projects').click();
+      cy.wait(1000);
+      cy.contains('Abilities').click();
+      cy.wait(1000);
+      cy.contains('Sign Up').click();
+      cy.wait(1000);
+      cy.contains('URL').click();
+      cy.wait(1000);
+
+      })
+      
+// Test for the Department page
+it('Department page loads successfully', () => {
+
+  cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/departments')
+ cy.wait(1000);
+cy.contains('Create a department').click();
+cy.wait(1000);
+cy.get('input[name="departmentname"]').eq(0).type('Development Team');
+cy.get('input[name="description"]').eq(1).type('A short description about nothing :)');
+cy.contains('Add a department').click();
+cy.get('input[name="Search for a department....').type('Development Team');
+})
+
+
+    })
