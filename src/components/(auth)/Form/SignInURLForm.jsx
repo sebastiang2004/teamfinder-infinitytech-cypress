@@ -1,9 +1,9 @@
-import {Button} from "@/components/ui/button.jsx";
 import {useJwt} from "react-jwt";
-import {CopyToClipboard} from "react-copy-to-clipboard/src";
 import {useRef} from "react";
+import {useLocation} from "react-router";
 
 export default function SignInURLForm() {
+  const location = useLocation();
 
   const {decodedToken} = useJwt(localStorage.getItem("token"));
   const inputRef = useRef();
@@ -14,7 +14,7 @@ export default function SignInURLForm() {
       <p className="custom-label">Sign In URL</p>
       <input type="text"
              className="custom-input"
-             value={`http://localhost:5173/register-employee?organizationId=${decodedToken?.organizationId}`}
+             value={`${location.origin}/register-employee?organizationId=${decodedToken?.organizationId}`}
              readOnly="readonly"
              ref={inputRef}
       />
