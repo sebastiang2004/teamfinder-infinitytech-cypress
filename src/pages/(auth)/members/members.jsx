@@ -26,11 +26,11 @@ export default function Members() {
   return (
     <Layout>
       <p className="text-[20px]">Members</p>
-      <div className="flex justify-center items-center mt-10 gap-20">
+      <div className="flex  items-center mt-10 gap-20">
         <Modal title={<Button className="px-10 py-4">Add a member</Button>} subtitle="Add a member"
                formElement={<SignInURLForm/>}/>
-        <input type="text" className="custom-input mt-0" placeholder="Search for a member..."/>
-        <SelectCustom/>
+        {/*<input type="text" className="custom-input mt-0" placeholder="Search for a member..."/>*/}
+        {/*<SelectCustom/>*/}
       </div>
       <div className="mt-16">
         <MembersTable/>

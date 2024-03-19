@@ -2,8 +2,15 @@ import {Button} from "@/components/(guest)/ui/button.jsx";
 import SelectCustom from "@/components/(auth)/SelectCustom.jsx";
 
 export default function ProjectForm() {
+
+
+  async function handleCreateProject(){
+
+  }
+
+
   return (
-    <form>
+    <form onSubmit={handleCreateProject}>
       <div className="grid grid-cols-2 gap-20">
         <div>
           <p className="custom-label">Project Name</p>
@@ -23,8 +30,6 @@ export default function ProjectForm() {
           <input type="date" className="custom-input"/>
           <p className="custom-label">Starea proiectului</p>
           <SelectCustom/>
-          {/*<p>neinceput incepand in desfasurare inchidere incheiat</p>*/}
-          {/*<p>la inceput pot selecta doar neinceput sau incepand cand creez proiectul</p>*/}
           <p className="custom-label">Required skills</p>
           <SelectCustom/>
         </div>

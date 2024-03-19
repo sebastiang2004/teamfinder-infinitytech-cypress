@@ -4,6 +4,7 @@ import axios from "axios";
 import {useAtom} from "jotai/index";
 import {selectedValueAtom} from "@/store/index.js";
 import notify from "@/alert/Notify.js";
+import SelectRole from "@/components/(auth)/Select/SelectRole.jsx";
 
 
 export default function UserRoleForm({memberId}) {
@@ -47,7 +48,7 @@ export default function UserRoleForm({memberId}) {
     <form onSubmit={handleAssignRole}>
       <p className="custom-label">Select Role</p>
       <div className="mt-3">
-        <SelectCustom items={roles}/>
+        <SelectRole items={roles}/>
       </div>
       <Button type="submit" className="mt-10 px-10 py-5">Save details</Button>
     </form>
