@@ -2,8 +2,15 @@ import {Button} from "@/components/(guest)/ui/button.jsx";
 import SelectCustom from "@/components/(auth)/SelectCustom.jsx";
 
 export default function ProjectForm() {
+
+
+  async function handleCreateProject(){
+
+  }
+
+
   return (
-    <form>
+    <form onSubmit={handleCreateProject}>
       <div className="grid grid-cols-2 gap-20">
         <div>
           <p className="custom-label">Project Name</p>

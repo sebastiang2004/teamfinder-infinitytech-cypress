@@ -1,19 +1,24 @@
-export default function AbilityDetails() {
+export default function AbilityDetails({skill}) {
+
+
+
+
   return (
     <>
-
-      {/* <p className="mt-5">The department manager who added this skill</p>
-        <p className="mt-5">List of departments where this skill is used</p>*/}
+      {/*<p className="mt-5">The department manager who added this skill</p>*/}
+      {/*<p className="mt-5">List of departments where this skill is used</p>*/}
       {/*<div className="flex gap-10">*/}
       {/*  <div className="custom-label text-[15px]">*/}
       {/*    <p>Name</p>*/}
       {/*    <p className="mt-5">Author</p>*/}
-      {/*    <p className="mt-5">Description</p>*/}
+      {/*    <p className="mt-5">Description : {skill.description}</p>*/}
       {/*  </div>*/}
       {/*  <div className="custom-label text-[15px]">*/}
       {/*    <p>Hilda B. Benitez</p>*/}
       {/*    <p className="mt-5">Billy S. Baughman</p>*/}
-      {/*    <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi architecto beatae consequuntur cumque dolor doloremque eum excepturi, exercitationem harum nam necessitatibus quam qui quisquam similique, sint totam ut vero!</p>*/}
+      {/*    <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi architecto*/}
+      {/*      beatae consequuntur cumque dolor doloremque eum excepturi, exercitationem harum nam necessitatibus quam qui*/}
+      {/*      quisquam similique, sint totam ut vero!</p>*/}
       {/*  </div>*/}
       {/*</div>*/}
       {/*<div className="flex gap-10">*/}
@@ -26,11 +31,11 @@ export default function AbilityDetails() {
       {/*    <p className="mt-5">marina riicuc</p>*/}
       {/*  </div>*/}
       {/*</div>*/}
-
       {/*<p className="custom-label">Name</p>*/}
       {/*<p className="mt-2">PHP</p>*/}
       {/*<p className="custom-label">Description</p>*/}
-      {/*<p className="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis delectus dolorem earum eligendi*/}
+      {/*<p className="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis delectus dolorem*/}
+      {/*  earum eligendi*/}
       {/*  exercitationem explicabo hic inventore ipsam laborum magnam nihil non qui quisquam quod, recusandae reiciendis*/}
       {/*  totam voluptates.</p>*/}
       {/*<p className="custom-label">Autor</p>*/}
