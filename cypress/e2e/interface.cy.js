@@ -68,18 +68,26 @@ cy.wait(2000)
     // Test for the Dashboard page
     it('Dashboard page loads successfully', () => {
       cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/dashboard')
-
+      cy.wait(1000);
+      //cy.contains('Dashboard').click()
+    //  cy.contains('Admin Dashboard').click()  //not implemented yet
+    //  cy.contains('Reports').click()
+      cy.wait(1000);
       cy.contains('Departments').click();
+      cy.contains('View all departments').click();
       cy.wait(1000);
       cy.contains('Members').click();
+      cy.contains('Add a member').click();
       cy.wait(1000);
       cy.contains('Projects').click();
+      cy.contains('View all projects').click();
       cy.wait(1000);
       cy.contains('Abilities').click();
+      cy.contains('Abilities').click();
       cy.wait(1000);
-      cy.contains('Sign Up').click();
+      cy.contains('Sign Up URL').click();
       cy.wait(1000);
-      cy.contains('URL').click();
+      cy.contains('Add a member').click();
       cy.wait(1000);
 
 // Test for the Department page
