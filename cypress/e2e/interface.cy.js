@@ -13,7 +13,7 @@ describe('Global Tests', () => {
   })
 
   it('Clicks on buttons on home page', () => {
-    cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/') // replace with the URL of your home page
+    cy.visit('https://teamfinder-infinitytech-yz1j.vercel.app/') 
 
     cy.contains('Home').click()
     cy.wait(2000)
