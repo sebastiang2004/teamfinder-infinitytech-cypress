@@ -23,8 +23,6 @@ export default function ProjectForm() {
           <input type="date" className="custom-input"/>
           <p className="custom-label">Starea proiectului</p>
           <SelectCustom/>
-          {/*<p>neinceput incepand in desfasurare inchidere incheiat</p>*/}
-          {/*<p>la inceput pot selecta doar neinceput sau incepand cand creez proiectul</p>*/}
           <p className="custom-label">Required skills</p>
           <SelectCustom/>
         </div>

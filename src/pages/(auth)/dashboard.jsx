@@ -6,7 +6,6 @@ import Layout from "@/pages/(auth)/layout.jsx";
 export default function Dashboard() {
 
   const {decodedToken} = useJwt(localStorage.getItem('token'));
-
   const navigate = useNavigate();
 
   useEffect(() => {
