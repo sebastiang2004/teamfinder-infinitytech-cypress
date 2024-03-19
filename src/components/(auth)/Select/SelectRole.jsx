@@ -5,7 +5,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import {useAtom} from "jotai/index";
+import {useAtom} from "jotai";
 import {selectedValueAtom} from "@/store/index.js";
 
 export default function SelectRole({items}) {

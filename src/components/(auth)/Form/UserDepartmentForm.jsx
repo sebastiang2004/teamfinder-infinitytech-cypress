@@ -1,4 +1,3 @@
-import SelectCustom from "@/components/(auth)/SelectCustom.jsx";
 import {useEffect} from "react";
 import {getDepartments} from "@/lib/utils.js";
 import {useJwt} from "react-jwt";

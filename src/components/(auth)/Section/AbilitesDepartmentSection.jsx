@@ -26,9 +26,9 @@ export default function AbilitesDepartmentSection() {
 
   }, [id]);
 
-  // async function handleDeleteSkill() {
-  //   await axios.delete("/")
-  // }
+  async function handleDeleteSkill(id) {
+    await axios.delete(`/skill/${id}`)
+  }
 
 
   return (
@@ -50,7 +50,7 @@ export default function AbilitesDepartmentSection() {
                                   formElement={<AbilityDetails/>}/>} text="View details"/>
                 <TooltipCustom element={<Modal title={<Edit size={16} className="mt-1"/>} subtitle="Edit skill"
                                                formElement={<AbilityForm/>}/>} text="Edit skill"/>
-                <TooltipCustom element={<X size={16}/>} text="Delete ability"/>
+                <TooltipCustom element={<X onClick={()=>handleDeleteSkill(skill._id)} size={16}/>} text="Delete ability"/>
               </div>
             </div>
           )
