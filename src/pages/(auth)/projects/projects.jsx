@@ -28,7 +28,7 @@ export default function Projects() {
       <div className="flex gap-52 mt-10">
         <Modal title={<Button className="px-10">Create a project</Button>} subtitle="Add a project"
                formElement={<ProjectForm/>}/>
-        <InputAnimated type="email" placeholder="Search a project..." className="px-8 w-96"/>
+        {/*<InputAnimated type="email" placeholder="Search a project..." className="px-8 w-96"/>*/}
       </div>
       <div className="mt-10">
         <TabsCustom tabs={projectTabs}/>

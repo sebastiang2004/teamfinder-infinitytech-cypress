@@ -103,15 +103,15 @@
   }
 
   .sidebar {
-    @apply flex flex-col sm:relative absolute p-5 bg-white duration-300 ease-in-out min-h-full md:border-0 border-r-2 border-gray-200
+    @apply flex flex-col sm:relative absolute p-5 bg-white duration-300 ease-in-out min-h-full md:border-0 border-r-2 border-gray-200 dark:bg-black dark:text-gray-300
   }
 
   .sidebar-title {
-    @apply text-[15px] transition-all my-1 tracking-wide text-primary-gray  hover:text-primary-purple;
+    @apply text-[15px] transition-all my-1 tracking-wide text-primary-gray  hover:text-primary-purple dark:text-gray-300;
   }
 
   .sidebar-subtitle {
-    @apply cursor-pointer text-[14px] transition-all my-2 text-secondary-blue hover:text-primary-purple;
+    @apply cursor-pointer text-[14px] transition-all my-2 text-secondary-blue hover:text-primary-purple dark:text-gray-300;
   }
 
   .sidebar-icon {
